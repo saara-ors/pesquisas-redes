@@ -68,3 +68,26 @@ header {
     background-color: var(--primary-color);
     text-align: center;
 }
+<!-- código omitido -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- código omitido -->@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --bg-color: #532b69;
+    --primary-color: #603080;
+    --secondary-color: #803ea7;
+    --font: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: var(--font);
+}
