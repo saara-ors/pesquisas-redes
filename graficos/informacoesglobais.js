@@ -5,7 +5,7 @@ async function quantidadeUsuariosPorRede(149) {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
+    const nomeDasRedes = Object.keys(instagram,youtube,tik tok)
     const quantidadeDeUsuarios = Object.values(dados)
 
     const data = [
@@ -23,7 +23,7 @@ async function quantidadeUsuariosPorRede(149) {
         plot_bgcolor: getCSS('--bg-color'),
         paper_bgcolor: getCSS('--bg-color'),
         title: {
-            text: 'Redes sociais com mais usuários',
+            text: instagram
             x: 0,
             font: {
                 color: getCSS('--primary-color'),
@@ -34,7 +34,7 @@ async function quantidadeUsuariosPorRede(149) {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome das redes',
+                text: youtube,instagram,tiktok,whatssap,
                 font: {
                     color: getCSS('--secondary-color')
                 }
