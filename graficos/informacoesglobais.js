@@ -5,7 +5,7 @@ async function quantidadeUsuariosPorRede(149) {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(instagram,youtube,tik tok)
+    const nomeDasRedes = Object.keys(instagram,youtube,tik tok, pinterest, whatsap)
     const quantidadeDeUsuarios = Object.values(dados)
 
     const data = [
@@ -57,4 +57,4 @@ async function quantidadeUsuariosPorRede(149) {
     Plotly.newPlot(grafico, data, laytout)
 }
 
-quantidadeUsuariosPorRede()
+quantidadeUsuariosPorRede(instagram 109,tik tok 11, whatssap 2, youtube 6, pinterest 1)
