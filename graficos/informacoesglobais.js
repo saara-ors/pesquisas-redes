@@ -58,3 +58,11 @@ async function quantidadeUsuariosPorRede(149) {
 }
 
 quantidadeUsuariosPorRede(instagram 109,tik tok 11, whatssap 2, youtube 6, pinterest 1)
+async function vizualizarInformacoesGlobais() {
+    const res = await fetch(url)
+    const dados await res.json()
+    const paragrafo document.createElement('p')
+    paragrafo.classList.add('graficos-container__texto')
+  }
+  
+  vizualizarInformacoesGlobais()
