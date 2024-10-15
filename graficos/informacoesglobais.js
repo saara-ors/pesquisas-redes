@@ -1,5 +1,5 @@
 
-const url = 'https://github.dev/Gabrielle923/PESQUISA_Redes-Sociais/blob/main/gr%C3%A1ficos/informa%C3%A7%C3%B5esGlobal.js'
+const url = https://github.dev/saara-ors/pesquisas-redes
 
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
