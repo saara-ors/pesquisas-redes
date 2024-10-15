@@ -1,78 +1,21 @@
 
-import { getCSS, tickConfig } from "./common.js"
+const url = 'https://github.dev/Gabrielle923/PESQUISA_Redes-Sociais/blob/main/gr%C3%A1ficos/informa%C3%A7%C3%B5esGlobal.js'
 
-async function quantidadeUsuariosPorRede(149) {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
-    const res = await fetch(url)
-    const dados = await res.json()
-    const nomeDasRedes = Object.keys(instagram,youtube,tik tok, pinterest, whatsap)
-    const quantidadeDeUsuarios = Object.values(dados)
-
-    const data = [
-        {
-            x: instagram, youtube 
-            y: 10, 6
-            type: 'bar',
-            marker: {
-                color: getCSS('--primary-color')
-            }
-        }
-    ]
-
-    const laytout = {
-        plot_bgcolor: getCSS('--bg-color'),
-        paper_bgcolor: getCSS('--bg-color'),
-        title: {
-            text: instagram
-            x: 0,
-            font: {
-                color: getCSS('--primary-color'),
-                size: 30,
-                font: getCSS('--font')
-            }
-        },
-        xaxis: {
-            tickfont: tickConfig,
-            title: {
-                text: youtube,instagram,tiktok,whatssap,
-                font: {
-                    color: getCSS('--secondary-color')
-                }
-            }
-        },
-        yaxis: {
-            tickfont: tickConfig,
-            title: {
-                text: 'Bilhões de usuários ativos',
-                font: {
-                    color: getCSS('--secondary-color')
-                }
-            }
-        }
-    }
-
-    const grafico = document.createElement('div')
-    grafico.className = 'grafico'
-    document.getElementById('graficos-container').appendChild(grafico)
-    Plotly.newPlot(grafico, data, laytout)
-}
-
-quantidadeUsuariosPorRede(instagram 109,tik tok 11, whatssap 2, youtube 6, pinterest 1)
 async function vizualizarInformacoesGlobais() {
     const res = await fetch(url)
-    const dados await res.json()
-    const paragrafo document.createElement('p')
+    const dados = await res.json()
+    const pessoasConectadas = (dados.total_pessoas_conectadas / 1e9)
+    const pessoasNoMundo = (dados.total_pessoas_mundo / 1e9)
+    const horas = parseInt(dados.tempo_medio)
+    const minutos = Math.round((dados.tempo_medio - horas) * 100)
+    const porcentagemConectada = ((pessoasConectadas / pessoasNoMundo ) * 100).toFixed(2)
+
+    const paragrafo = document.createElement('p')
     paragrafo.classList.add('graficos-container__texto')
-  }
-  
-  vizualizarInformacoesGlobais()
-  async function vizualizarInformacoesGlobais() {
-    const res = await fetch(url)
-    const dados await res.json()
-    const paragrafo document.createElement('p')
-    paragrafo.classList.add('graficos-container__texto')
-   paragrafo.innerHTML = `Você sabia que o mundo tem ${dados.total_pessoas_mundo} de pessoas e que aproximadamente ${dados.total_pessoas_conectadas} estão conectadas em alguma rede social e passam em média ${dados.tempo_medio} horas conectadas.`
-    console.log(paragrafo)
-  }
-  
-  vizualizarInformacoesGlobais()
+    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${7888000000} bilhões</span> de pessoas e que aproximadamente <span>${5040000000} bilhões</span> estão conectadas em alguma rede social e passam em média <span>${horas} horas</span> e <span>${minutos} minutos</span> conectadas.<br>Isso significa que aproximadamente <span>${porcentagemConectada}%</span> de pessoas estão conectadas em alguma rede social.`
+
+    const container = document.getElementById('graficos-container')
+    container.appendChild(paragrafo)
+}
+
+vizualizarInformacoesGlobais()
