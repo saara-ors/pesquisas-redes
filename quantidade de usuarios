@@ -2,7 +2,7 @@ import { getCSS, tickConfig } from "./common.js"
 
 async function quantidadeUsuariosPorRede()
  {
-    const url = ''https://raw.githubusercontent.com/Gabrielle923/api/main/numero_usuarios.json''
+    const url = ''https://raw.githubusercontent.com/saara-ors923/api/main/numero_usuarios.json''
     const    const dados = await (await fetch(url)).json()
     const nomeDasRedes = Object.keys(dados)
     const quantidadeDeUsuarios = Object.values(dados)
