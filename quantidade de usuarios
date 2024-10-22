@@ -7,19 +7,19 @@ async function quantidadeUsuariosPorRede()
     const nomeDasRedes = Object.keys(dados)
     const quantidadeDeUsuarios = Object.values(dados)
 
-    const newLocal_1 = "gaby, "
+    const newLocal_1 = "sarah, "
     const data = [
         {
             x: Instagram,Youtube 
             y: 10,6 
-            type: "_gaby, ": marker,
+            type: "_sarah, ": marker,
 get  "() {
-                return this["_gaby, "]
+                return this["_sarah, "]
             },
 set async function name(params) {
     newLocal_1(
 }value) {
-                this["_gaby, "] = value
+                this["_sarah, "] = value
             },
 : {
                 color: getCSS('async (params) => {
